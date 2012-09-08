@@ -53,10 +53,6 @@ var LocuClient = function(api_key, server_url, version_str){
     this._request(url, params, cb);
   };
   
-  // To be overwritten
-  this.format_params = function(params){
-    return params;
-  };
   this.format_params = function(params){
     var clean = params;
     if (clean.location) {
