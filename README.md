@@ -22,8 +22,7 @@ Find somewhere selling espresso in San Francisco:
 
 ```javascript
 > var locu = require('locu');
-> var my_api_key = 'foobar3foobar3'; // swap this out for your own
-> var mclient = locu.MenuItemClient(my_api_key);
+> var mclient = locu.MenuItemClient(KEY); // KEY is your API key, found on dev.locu.com
 > mclient.search({name:'espresso', locality:'San Francisco'}, function(result){
 ... console.log(result.objects[0]);
 ... });
