@@ -1,4 +1,4 @@
-locu-node
-=========
+locu-nodejs
+===========
 
-A Node.js wrapper for Locu's API
+Locu Node.js repository
