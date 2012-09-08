@@ -8,7 +8,7 @@ help you get going right away.
 # Installation
 
 Either clone this repository (`git clone git@github.com:Locu-Unofficial/locu-node.git`)
-or install it with the Node Package Manager (`npm install locu`). Boom.
+or install it with the Node Package Manager (`npm install https://github.com/Locu-Unofficial/locu-node/tarball/master`). Boom.
 
 # Documentation
 
