@@ -1,6 +1,6 @@
 {
   "name": "locu",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Unofficial API bindings for Locu's API",
   "main": "locu.js",
   "scripts": {
