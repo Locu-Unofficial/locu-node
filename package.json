@@ -1,0 +1,26 @@
+{
+  "name": "locu-node",
+  "version": "0.0.0",
+  "description": "Unofficial API bindings for Locu's API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies" : {
+    "request" : ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Locu-Unofficial/locu-node.git"
+  },
+  "keywords": [
+    "locu",
+    "local",
+    "search",
+    "insight",
+    "menu",
+    "venue"
+  ],
+  "author": "peterldowns",
+  "license": "MIT"
+}
