@@ -1,5 +1,5 @@
 {
-  "name": "locu-node",
+  "name": "locu",
   "version": "0.0.0",
   "description": "Unofficial API bindings for Locu's API",
   "main": "locu.js",
