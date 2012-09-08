@@ -75,3 +75,22 @@ Find [Blue Bottle Coffee](http://www.bluebottlecoffee.com/):
 > ^D
 ```
 
+Get insights for particular venues.
+
+```javascript
+> var locu = require('locu');
+> var my_api_key = 'foobar3foobar3'; // swap this out for your own
+> var vclient = locu.VenueClient(my_api_key);
+> vclient.insight('category', {location:[37.775, -122.4183]}, function(results){console.log(results);});
+{ meta: { 'cache-expiry': 3600 },
+  objects: 
+   { category: 
+      { 'beauty salon': 9.3265,
+        gym: 0.9655,
+        'hair care': 3.1513,
+        laundry: 2.0796,
+        other: 0.7321,
+        restaurant: 39.8418,
+        spa: 2.1008 } } }
+> ^D
+```
