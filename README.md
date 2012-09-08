@@ -75,6 +75,33 @@ Find [Blue Bottle Coffee](http://www.bluebottlecoffee.com/):
 > ^D
 ```
 
+Find burgers between $5 and $7. 
+
+```javascript
+```javascript
+> var locu = require('locu');
+> var my_api_key = 'foobar3foobar3'; // swap this out for your own
+> var menu_client = locu.MenuItemClient(my_api_key);
+> menu_client.search({ country: 'USA', name: 'burger', price__gte: 5, price__lt: 7}, function(r){
+    console.log(r);
+});
+
+{ meta: { 'cache-expiry': 3600, limit: 100 },
+  objects: 
+   [ { description: 'We do the grilling you do the Ketchup. Let us know if you like cheese.',
+       id: 'a31e1d0e1296b198f7374d63b2da58d7110d87eb5f66d070491305953fc2aa4a',
+       name: 'Kids Burger and Fries',
+       price: 5,
+       resource_uri: '/v1_0/menu_item/a31e1d0e1296b198f7374d63b2da58d7110d87eb5f66d070491305953fc2aa4a/',
+       venue: [Object] },
+     { description: 'Red Goat Goat cheese, roasted red peppers, walnuts, Vermont cheddar (sandwich only)',
+       id: '8906a464d580768e1ac853d2299d3f17073a4b4c3d089695af0e1e72c32321a4',
+       name: 'You are ìSoyî Going to Like it Burger',
+       price: 6,
+       resource_uri: '/v1_0/menu_item/8906a464d580768e1ac853d2299d3f17073a4b4c3d089695af0e1e72c32321a4/',
+       venue: [Object] } ] }
+
+
 Get insights for particular venues.
 
 ```javascript
