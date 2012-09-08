@@ -146,10 +146,16 @@ var LocuClient = function(api_key, server_url, version_str){
   };
   
   this.get_details = function(ids, callback){
-    if (ids.length > 5){
-      ids = ids.slice(0, 5); // limit to the first 5 ids
+    var id_param;
+    if (typeof ids === 'string'){
+      id_param = [ids];
     }
-    var id_param = ids.join(';');
+    else {
+      if (ids.length > 5){
+        ids = ids.slice(0,5);
+      }
+      id_param = ids.join(';');
+    }
     this.request(id_param, {}, callback);
   };
 
