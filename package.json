@@ -2,7 +2,7 @@
   "name": "locu-node",
   "version": "0.0.0",
   "description": "Unofficial API bindings for Locu's API",
-  "main": "index.js",
+  "main": "locu.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
