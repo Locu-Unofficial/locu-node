@@ -28,7 +28,7 @@ var LocuClient = function(api_key, server_url, version_str){
   this.debug = false; // manually set this to true for debug messages
   this.api_key = api_key;
   this.api_version_str = version_str || 'v1_0';
-  this.server_url = server_url || 'http://api_staging.locu.com';
+  this.server_url = server_url || 'http://api.locu.com';
   this.base = this.server_url + '/' + this.api_version_str + '/'; // used for all HTTP requests
 
   /* Cleans up parameters and formats them for use with our REST API.
