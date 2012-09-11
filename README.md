@@ -78,7 +78,6 @@ Find [Blue Bottle Coffee](http://www.bluebottlecoffee.com/):
 Find burgers between $5 and $7. 
 
 ```javascript
-```javascript
 > var locu = require('locu');
 > var my_api_key = 'foobar3foobar3'; // swap this out for your own
 > var menu_client = locu.MenuItemClient(my_api_key);
@@ -100,7 +99,7 @@ Find burgers between $5 and $7.
        price: 6,
        resource_uri: '/v1_0/menu_item/8906a464d580768e1ac853d2299d3f17073a4b4c3d089695af0e1e72c32321a4/',
        venue: [Object] } ] }
-
+```
 
 Get insights for particular venues.
 
