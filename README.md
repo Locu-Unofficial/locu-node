@@ -6,18 +6,30 @@ wrapper for doing *exactly* that. This is unofficial, but should
 help you get going right away.
 
 # Installation
-Either Install with npm (`npm intall locu`) or clone this repository (`git clone git@github.com:Locu-Unofficial/locu-node.git`)
-or install it with the Node Package Manager (`npm install https://github.com/Locu-Unofficial/locu-node/tarball/master`). Boom.
+
+Either install with npm:
+
+    npm install locu
+
+Or clone this repository:
+
+    git clone git@github.com:Locu-Unofficial/locu-node.git
+
+Or install it from this repository via npm:
+
+    npm install https://github.com/Locu-Unofficial/locu-node/tarball/master
+
+Boom.
 
 # Documentation
 
 There are some good comments in [the source](https://github.com/Locu-Unofficial/locu-node/blob/master/locu.js),
-but you should definitely check out [our REST API docs](http://dev.locu.com) to figure out what parameters are
+but you should definitely check out [our REST API docs](http://dev.locu.com) to figure out which parameters are
 allowed and what they do.
 
 # Usage
 
-Find somewhere selling espresso in San Francisco:
+Find someplace selling espresso in San Francisco:
 
 ```javascript
 > var locu = require('locu');
@@ -52,8 +64,8 @@ Find [Blue Bottle Coffee](http://www.bluebottlecoffee.com/):
 > var my_api_key = 'foobar3foobar3'; // swap this out for your own
 > var vclient = new locu.VenueClient(my_api_key);
 > var blue_bottle;
-> vclient.search({name:'Blue Bottle Coffee', locality: 'San Francisco'}, function(resposne){
-... blue_bottle = response.objects[0];
+> vclient.search({name:'Blue Bottle Coffee', locality: 'San Francisco'}, function(result){
+... blue_bottle = result.objects[0];
 });
 > blue_bottle;
 { categories: [ 'restaurant' ],
@@ -74,14 +86,14 @@ Find [Blue Bottle Coffee](http://www.bluebottlecoffee.com/):
 > ^D
 ```
 
-Find burgers between $5 and $7.
+Find burgers between $5 and $7:
 
 ```javascript
 > var locu = require('locu');
 > var my_api_key = 'foobar3foobar3'; // swap this out for your own
 > var menu_client = new locu.MenuItemClient(my_api_key);
-> menu_client.search({ country: 'USA', name: 'burger', price__gte: 5, price__lt: 7}, function(r){
-    console.log(r);
+> menu_client.search({ country: 'USA', name: 'burger', price__gte: 5, price__lt: 7}, function(result){
+    console.log(result);
 });
 
 { meta: { 'cache-expiry': 3600, limit: 100 },
@@ -100,13 +112,13 @@ Find burgers between $5 and $7.
        venue: [Object] } ] }
 ```
 
-Get insights for particular venues.
+Get insights for particular venues:
 
 ```javascript
 > var locu = require('locu');
 > var my_api_key = 'foobar3foobar3'; // swap this out for your own
 > var vclient = new locu.VenueClient(my_api_key);
-> vclient.insight('category', {location:[37.775, -122.4183]}, function(results){console.log(results);});
+> vclient.insight('category', {location:[37.775, -122.4183]}, function(result){console.log(result);});
 { meta: { 'cache-expiry': 3600 },
   objects:
    { category:
